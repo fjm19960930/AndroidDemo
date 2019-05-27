@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ **********************************************************
+  ~   author   fanjiaming
+  ~   company  telchina
+  ~   email    fanjiaming@telchina.net
+  ~   date     18-11-9 上午10:35
+  ~ *********************************************************
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <solid android:color="#883385FF"/>
+
+    <corners android:radius="10dp"/>
+
+</shape>

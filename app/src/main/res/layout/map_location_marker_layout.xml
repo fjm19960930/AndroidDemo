@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimens_small"
+    android:paddingBottom="@dimen/dimens_large"
+    android:paddingHorizontal="@dimen/dimens_small"
+    android:background="@mipmap/map_icon_marker"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map_location"/>
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:id="@+id/tv_map_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="天安门附近" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map_location_lng"/>
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:id="@+id/tv_map_location_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="123"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map_location_lat"/>
+        <TextView
+            style="@style/TextStyle_White_Micro"
+            android:id="@+id/tv_map_location_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="321"/>
+    </LinearLayout>
+</LinearLayout>

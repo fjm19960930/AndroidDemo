@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--系统主题相关颜色-->
+    <color name="colorPrimary">#3385FF</color>
+    <color name="colorPrimaryDark">#3385FF</color>
+    <color name="colorAccent">#3385FF</color>
+
+    <!--中黑-->
+    <color name="black_mid">#757575</color>
+    <!-- 浅黑 -->
+    <color name="black">#000000</color>
+    <!-- 浅黑 87%-->
+    <color name="black_light">#D9000000</color>
+    <!-- 浅浅黑 65%-->
+    <color name="black_light_light">#a4000000</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#50000000</color>
+
+    <color name="login_btn_bg">#BA052E87</color>
+    <color name="project_detail_title">#DEEAFA</color>
+    <color name="project_detail_title_text">#4A90E2</color>
+    <color name="blue_lighter_light">#80DEEAFA</color>
+
+    <color name="blue_lighter">#DEEAFA</color>
+    <!-- 浅蓝 -->
+    <color name="blue_light">#499DD7</color>
+    <!-- 中蓝 -->
+    <color name="blue_mid">#13B8F5</color>
+    <!-- 深灰 -->
+    <color name="gray_dark">#444444</color>
+    <!-- 灰 -->
+    <color name="gray_large">#f5f5f5</color>
+    <!-- 中灰 -->
+    <color name="gray_mid">#c3c3c3</color>
+    <!-- 浅灰 -->
+    <color name="gray_light">#e2e2e2</color>
+    <!-- 浅灰 -->
+    <color name="gray_disable">#d7d7d7</color>
+    <!-- 白 -->
+    <color name="white">#ffffffff</color>
+    <!-- 白 半透明-->
+    <color name="white_216">#D5ffffff</color>
+    <!-- 浅白 -->
+    <color name="white_light">#FFf7f7f7</color>
+
+    <!--边线或分割线 灰色-->
+    <color name="divider_gray">#dddddd</color>s
+
+    <!-- <color name="divider">#eeeeee</color>-->
+    <!--道路颜色s101-->
+    <color name="road_s101">#1F004B</color>
+    <!--道路颜色s102-->
+    <color name="road_s102">#B50700</color>
+    <!--道路颜色s103-->
+    <color name="road_s103">#814789</color>
+    <!--道路颜色s104-->
+    <color name="road_s104">#272789</color>
+    <!--道路颜色s105-->
+    <color name="road_s105">#077107</color>
+
+    <color name="chart_label">#8affffff</color>
+    <color name="bg_chart_item">#0dffffff</color>
+
+    <color name="green">#00FF00</color>
+    <color name="yellow">#FF7F00</color>
+    <color name="red">#FF0000</color>
+    <color name="red_light">#FF4089</color>
+
+</resources>

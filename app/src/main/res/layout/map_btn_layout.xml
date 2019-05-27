@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent">
+    
+    <ImageView
+        android:id="@+id/map_btn_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map_icon_layers"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:contentDescription="@string/map_btn_layer" />
+    <ImageView
+        android:id="@+id/map_btn_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map_icon_location"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:contentDescription="@string/map_btn_location" />
+    <ImageView
+        android:id="@+id/map_btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map_icon_change"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:contentDescription="@string/map_btn_change" />
+    <ImageView
+        android:id="@+id/map_btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map_icon_remove"
+        android:contentDescription="@string/map_btn_clear" />
+</LinearLayout>

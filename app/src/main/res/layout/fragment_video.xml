@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pivot.myandroiddemo.fragment.VideoFragment">
+
+    <Button
+        android:id="@+id/btnXiaXian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_mid"
+        android:layout_marginRight="@dimen/dimens_mid"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:layout_marginTop="@dimen/dimens_small"
+        android:text="强制下线"
+        android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_mid"
+        android:layout_marginRight="@dimen/dimens_mid"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:layout_marginTop="@dimen/dimens_small"
+        android:text="调用相机"
+        android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+    <Button
+        android:id="@+id/btnAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_mid"
+        android:layout_marginRight="@dimen/dimens_mid"
+        android:layout_marginBottom="@dimen/dimens_small"
+        android:layout_marginTop="@dimen/dimens_small"
+        android:text="调用手机通讯录"
+        android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+    <com.zcolin.gui.ZSpinner
+        android:id="@+id/z_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens_small"
+        android:text="点击加载图片"/>
+    <ImageView
+        android:id="@+id/iv_glide_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+</LinearLayout>

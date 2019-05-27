@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">远 行</string>
+
+    <string name="login">登 录</string>
+    <string name="login_name">请输入用户名</string>
+    <string name="login_pwd">请输入密码</string>
+    <string name="login_remember">记住密码</string>
+    <string name="register">注 册</string>
+    <string name="register_submit">提 交</string>
+    <string name="register_reset">重 置</string>
+
+    <string name="main_setting_step">今日步数</string>
+    <string name="main_setting_plan">我的计划</string>
+    <string name="main_setting_sport">运动历史</string>
+    <string name="main_setting_calorie">食物热量</string>
+    <string name="main_setting_about">关于我们</string>
+
+    <string name="mine_travel">行程</string>
+    <string name="mine_message">消息</string>
+    <string name="mine_food">美食</string>
+    <string name="mine_beauty">美景</string>
+    <string name="mine_tab_plan">我的计划</string>
+    <string name="mine_tab_food">我的美食</string>
+    <string name="mine_tab_beauty">我的美景</string>
+
+    <string name="map_btn_layer">图层</string>
+    <string name="map_btn_location">定位</string>
+    <string name="map_btn_change">切换</string>
+    <string name="map_btn_clear">清除</string>
+    <string name="map_location">当前位置：</string>
+    <string name="map_location_lng">当前经度：</string>
+    <string name="map_location_lat">当前纬度：</string>
+
+    <string name="news_tab_top">头条</string>
+    <string name="news_tab_sport">体育</string>
+    <string name="news_tab_entertainment">娱乐</string>
+    <string name="news_tab_internal">国内</string>
+    <string name="news_tab_technology">科技</string>
+    <string name="news_tab_international">国外</string>
+
+    <string name="weather_image">天气图片</string>
+    <string name="head_image">个人头像</string>
+</resources>

@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="toolbar_size">48dp</dimen>
+    <dimen name="tablayout_size">36dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- toolbar 标题-->
+    <dimen name="text_title">18sp</dimen>
+
+    <dimen name="dimen_title">20sp</dimen>
+    <dimen name="dimen_sub_title">18sp</dimen>
+    <dimen name="dimen_body">14sp</dimen>
+    <dimen name="dimen_caption">12sp</dimen>
+
+    <dimen name="line">0.5dp</dimen>
+    <dimen name="dimens_small_min">1dp</dimen>
+    <dimen name="dimens_small_small">2dp</dimen>
+    <dimen name="dimens_small">5dp</dimen>
+    <dimen name="dimens_mid">10dp</dimen>
+    <dimen name="dimens_big">15dp</dimen>
+    <dimen name="dimens_big_big">20dp</dimen>
+    <dimen name="dimens_large">25dp</dimen>
+    <dimen name="dimens_large_small">30dp</dimen>
+    <dimen name="dimens_large_mid">35dp</dimen>
+    <dimen name="dimens_large_mid_lager">37dp</dimen>
+    <dimen name="dimens_large_big">40dp</dimen>
+    <dimen name="dimens_large_large">45dp</dimen>
+    <dimen name="dimens_corner_radius">1dp</dimen>
+    <dimen name="dimens_btn_padding">10dp</dimen>
+    <dimen name="dimens_icon_radius_large">100dp</dimen>
+    <dimen name="dimens_icon_radius_big">80dp</dimen>
+    <dimen name="dimens_icon_radius_normal">60dp</dimen>
+    <dimen name="dimens_icon_radius_small">40dp</dimen>
+
+    <dimen name="dimens_height_small_small">48dp</dimen>
+    <dimen name="dimens_height_small">56dp</dimen>
+    <dimen name="dimens_height_big">67dp</dimen>
+
+    <dimen name="text_size_min">10sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_large">21sp</dimen>
+    <dimen name="text_size_larger">24sp</dimen>
+
+    <dimen name="text_before_width">5dp</dimen>
+    <dimen name="text_before_height">14dp</dimen>
+</resources>

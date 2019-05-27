@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/dimens_mid"
+    android:layout_marginRight="@dimen/dimens_mid"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv_forecast_icon"
+            android:layout_width="@dimen/dimens_icon_radius_small"
+            android:layout_height="@dimen/dimens_icon_radius_small"
+            android:contentDescription="@string/weather_image" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextStyle_BlackLight_Micro"
+        android:id="@+id/tv_forecast_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimens_small_small"
+        tools:text="7°/ -3°" />
+
+    <TextView
+        style="@style/TextStyle_BlackLight_Micro"
+        android:id="@+id/tv_forecast_date"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimens_small_small"
+        tools:text="12月12号" />
+</LinearLayout>
