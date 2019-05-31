@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
     private ZTabView mTabView;
     private ArrayList<Fragment> listFragment = new ArrayList<>();
     private Intent step_service;//计步服务
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

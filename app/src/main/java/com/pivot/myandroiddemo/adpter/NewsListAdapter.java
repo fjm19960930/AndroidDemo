@@ -3,6 +3,8 @@ package com.pivot.myandroiddemo.adpter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,11 +37,13 @@ public class NewsListAdapter extends BaseRecyclerAdapter<NewsEntity.NewsItemEnti
         TextView newsAuthor = getView(holder, R.id.tv_news_author);
         TextView newsDate = getView(holder, R.id.tv_news_date);
         ImageView newsImage = getView(holder, R.id.iv_news_item);
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.list_item_enter);
         
         newsTitle.setText(data.title);
         newsAuthor.setText(data.author_name);
         newsDate.setText(data.date);
         ImageLoaderUtils.displayImage(context, data.thumbnail_pic_s, newsImage);
+        newsItemLayout.startAnimation(animation);
         newsItemLayout.setOnClickListener(v -> {
             Intent intent = new Intent(context, NewsWebActivity.class);
             intent.putExtra("newsUrl", data.url);
