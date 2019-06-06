@@ -2,52 +2,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context="com.pivot.myandroiddemo.fragment.VideoFragment">
-
+    
     <Button
-        android:id="@+id/btnXiaXian"
+        style="@style/TextStyle_White_Normal"
+        android:id="@+id/btn_test_indexSide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimens_mid"
-        android:layout_marginRight="@dimen/dimens_mid"
-        android:layout_marginBottom="@dimen/dimens_small"
-        android:layout_marginTop="@dimen/dimens_small"
-        android:text="强制下线"
+        android:layout_margin="@dimen/dimens_small"
+        android:padding="@dimen/dimens_mid"
+        android:gravity="center"
+        android:text="IndexSideDemo"
         android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     <Button
-        android:id="@+id/btnCamera"
+        style="@style/TextStyle_White_Normal"
+        android:id="@+id/btn_test_bezier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimens_mid"
-        android:layout_marginRight="@dimen/dimens_mid"
-        android:layout_marginBottom="@dimen/dimens_small"
-        android:layout_marginTop="@dimen/dimens_small"
-        android:text="调用相机"
+        android:layout_margin="@dimen/dimens_small"
+        android:padding="@dimen/dimens_mid"
+        android:gravity="center"
+        android:text="贝塞尔曲线Demo"
         android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     <Button
-        android:id="@+id/btnAddress"
+        style="@style/TextStyle_White_Normal"
+        android:id="@+id/btn_test_evaluator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimens_mid"
-        android:layout_marginRight="@dimen/dimens_mid"
-        android:layout_marginBottom="@dimen/dimens_small"
-        android:layout_marginTop="@dimen/dimens_small"
-        android:text="调用手机通讯录"
+        android:layout_margin="@dimen/dimens_small"
+        android:padding="@dimen/dimens_mid"
+        android:gravity="center"
+        android:text="估值器Demo"
         android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
-    <com.zcolin.gui.ZSpinner
-        android:id="@+id/z_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/btn_glide"
+        style="@style/TextStyle_White_Normal"
+        android:id="@+id/btn_test_red_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_small"
+        android:padding="@dimen/dimens_mid"
+        android:gravity="center"
+        android:text="小红点Demo"
+        android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+    <com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dimens_small"
-        android:text="点击加载图片"/>
-    <ImageView
-        android:id="@+id/iv_glide_demo"
-        android:layout_width="match_parent"
+        android:text="what are you 弄啥呢"
+        app:scrollBackgroundColor="@color/colorPrimary"
+        app:isRepeat="true"/>
+    <com.pivot.myandroiddemo.test.ripperbutton.RipperButton
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        tools:ignore="ContentDescription" />
+        android:text="水波按钮" />
+    <!--<Button-->
+    <!--android:id="@+id/btnXiaXian"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dimens_mid"-->
+    <!--android:layout_marginRight="@dimen/dimens_mid"-->
+    <!--android:layout_marginBottom="@dimen/dimens_small"-->
+    <!--android:layout_marginTop="@dimen/dimens_small"-->
+    <!--android:text="强制下线"-->
+    <!--android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/btnCamera"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dimens_mid"-->
+    <!--android:layout_marginRight="@dimen/dimens_mid"-->
+    <!--android:layout_marginBottom="@dimen/dimens_small"-->
+    <!--android:layout_marginTop="@dimen/dimens_small"-->
+    <!--android:text="调用相机"-->
+    <!--android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/btnAddress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dimens_mid"-->
+    <!--android:layout_marginRight="@dimen/dimens_mid"-->
+    <!--android:layout_marginBottom="@dimen/dimens_small"-->
+    <!--android:layout_marginTop="@dimen/dimens_small"-->
+    <!--android:text="调用手机通讯录"-->
+    <!--android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>-->
+    <!--<com.zcolin.gui.ZSpinner-->
+    <!--android:id="@+id/z_spinner"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--<Button-->
+    <!--android:id="@+id/btn_glide"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="@dimen/dimens_small"-->
+    <!--android:text="点击加载图片"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_glide_demo"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--tools:ignore="ContentDescription" />-->
 </LinearLayout>

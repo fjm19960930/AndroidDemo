@@ -70,7 +70,7 @@
             android:launchMode="singleTask" />
         <activity android:name=".activity.MineDetailsActivity" />
         <activity android:name=".activity.NewsWebActivity" />
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".activity.CameraActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".InitActivity">
@@ -104,6 +104,11 @@
             android:name=".service.StepCounterService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".test.indexside.IndexSideActivity" />
+        <activity android:name=".test.bezier.BezierActivity" />
+        <activity android:name=".test.evaluator.EvaluatorActivity" />
+        <activity android:name=".test.redpoint.RedPointActivity"></activity>
     </application>
 
 </manifest>

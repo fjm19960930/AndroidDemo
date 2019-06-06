@@ -18,4 +18,8 @@
         <attr name="isSupportExit" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="ShimmerTextView">
+        <attr name="scrollBackgroundColor" format="color" />
+        <attr name="isRepeat" format="boolean" />
+    </declare-styleable>
 </resources>

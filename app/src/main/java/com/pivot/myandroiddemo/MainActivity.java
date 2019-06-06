@@ -77,7 +77,7 @@ public class MainActivity extends BaseActivity {
         mTabView.addZTab(getNewTab("首页", R.mipmap.tab_icon_main_normal, R.mipmap.tab_icon_main_high));
         mTabView.addZTab(getNewTab("地图", R.mipmap.tab_icon_map_normal, R.mipmap.tab_icon_map_high));
         mTabView.addZTab(getNewTab("新闻", R.mipmap.tab_icon_news_normal, R.mipmap.tab_icon_news_high));
-        mTabView.addZTab(getNewTab("视频", R.mipmap.tab_icon_video_normal, R.mipmap.tab_icon_video_high));
+        mTabView.addZTab(getNewTab("测试", R.mipmap.tab_icon_video_normal, R.mipmap.tab_icon_video_high));
         
         mTabView.addZTabListener((arg0, index) -> {
             mTabView.selectTab(index);

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.pivot.myandroiddemo.test.evaluator.EvaluatorActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimens_small"
+        android:layout_margin="@dimen/dimens_mid">
+        <Button
+            android:id="@+id/char_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始"/>
+        <Button
+            android:id="@+id/char_pause_resume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="暂停/恢复"/>
+    </LinearLayout>
+    <com.pivot.myandroiddemo.test.evaluator.CharChangeView
+        android:id="@+id/evaluator_char_change"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <com.pivot.myandroiddemo.test.evaluator.CircleChangeView
+        android:id="@+id/evaluator_circle_change"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+</LinearLayout>
