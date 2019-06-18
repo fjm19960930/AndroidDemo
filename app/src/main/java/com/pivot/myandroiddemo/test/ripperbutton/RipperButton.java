@@ -13,6 +13,7 @@ import android.view.animation.AccelerateInterpolator;
 
 /**
  * 点击产生水波动画的按钮
+ * @author fjm
  */
 public class RipperButton extends android.support.v7.widget.AppCompatButton{
     private int mX, mY;
@@ -47,13 +48,15 @@ public class RipperButton extends android.support.v7.widget.AppCompatButton{
         if (mX != event.getX() || mY != event.getY()) {
             mX = (int) event.getX();
             mY = (int) event.getY();
-
+            
             setRadius(DEFAULT_RADIUS);
         }
 
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             return true;
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
+            performClick();//解决touch事件和click点击的冲突问题
+            
             if (mAnimator != null && mAnimator.isRunning()) {
                 mAnimator.cancel();
             }

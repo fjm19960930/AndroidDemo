@@ -108,7 +108,18 @@
         <activity android:name=".test.indexside.IndexSideActivity" />
         <activity android:name=".test.bezier.BezierActivity" />
         <activity android:name=".test.evaluator.EvaluatorActivity" />
-        <activity android:name=".test.redpoint.RedPointActivity"></activity>
+        <activity android:name=".test.redpoint.RedPointActivity" />
+        <activity android:name=".test.recyclerview.RecyclerDemoActivity" />
+        <activity android:name=".activity.TextInputDemoActivity" />
+        <activity android:name=".test.tablelayout.TabLayoutDemoActivity" />
+
+        <service
+            android:name=".aidldemo.MyAidlService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aidl" />
+
+        <activity android:name=".aidldemo.MyAidlActivity"></activity>
     </application>
 
 </manifest>

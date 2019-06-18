@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity {
         listFragment.add(VideoFragment.newInstance());
         initView();
 
-        ToastUtil.toastLong(SystemUtils.isServiceRunning(mActivity, "com.pivot.myandroiddemo.service.StepCounterService")+"");
+        ToastUtil.toastLong(SystemUtils.isServiceRunning(mActivity, "com.pivot.myandroiddemo.service.StepCounterService") + "");
         if (!SystemUtils.isServiceRunning(mActivity, "com.pivot.myandroiddemo.service.StepCounterService")) {
             step_service = new Intent(mActivity, StepCounterService.class);
             mActivity.startService(step_service);

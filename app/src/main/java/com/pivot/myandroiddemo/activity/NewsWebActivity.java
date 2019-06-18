@@ -12,6 +12,7 @@ import com.pivot.myandroiddemo.base.BaseActivity;
  */
 @ActivityParam(isShowToolBar = true, isShowReturn = true)
 public class NewsWebActivity extends BaseActivity {
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

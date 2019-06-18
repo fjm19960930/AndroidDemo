@@ -95,10 +95,10 @@ public abstract class BaseActivity extends BaseFrameActivity {
         for (final Method method : methods) {
             ZClick clickArray = method.getAnnotation(ZClick.class);//通过反射api获取方法上面的注解
             if (clickArray != null && clickArray.value().length > 0) {
-                method.setAccessible(true);
-                final boolean isHasParam = method.getParameterTypes() != null && method.getParameterTypes().length > 0;
-                for (int click : clickArray.value()) {
-                    final View view = getView(click);//通过注解的值获取View控件
+                method.setAccessible(true);//设置为true就可以访问private修饰的成员方法和变量，否则无法访问
+                final boolean isHasParam = method.getParameterTypes() != null && method.getParameterTypes().length > 0;//当前方法是否包含输入参数
+                for (int id : clickArray.value()) {
+                    final View view = getView(id);//通过注解的值获取View控件
                     if (view == null) {
                         return;
                     }
