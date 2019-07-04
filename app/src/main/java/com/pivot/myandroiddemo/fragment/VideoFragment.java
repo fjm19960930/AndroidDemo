@@ -13,9 +13,11 @@ import com.pivot.myandroiddemo.aidldemo.MyAidlActivity;
 import com.pivot.myandroiddemo.base.BaseFragment;
 import com.pivot.myandroiddemo.test.bezier.BezierActivity;
 import com.pivot.myandroiddemo.test.evaluator.EvaluatorActivity;
+import com.pivot.myandroiddemo.test.eventbus.EventBusFirstActivity;
 import com.pivot.myandroiddemo.test.indexside.IndexSideActivity;
 import com.pivot.myandroiddemo.test.recyclerview.RecyclerDemoActivity;
 import com.pivot.myandroiddemo.test.redpoint.RedPointActivity;
+import com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView;
 import com.pivot.myandroiddemo.test.tablelayout.TabLayoutDemoActivity;
 import com.zcolin.frame.util.ToastUtil;
 
@@ -25,6 +27,7 @@ import com.zcolin.frame.util.ToastUtil;
 public class VideoFragment extends BaseFragment {
 
     private LinearLayout rootLayout;
+    private ShimmerTextView tv;
 
     public static VideoFragment newInstance() {
         Bundle args = new Bundle();
@@ -56,18 +59,29 @@ public class VideoFragment extends BaseFragment {
     @Override
     protected void lazyLoad(@Nullable Bundle savedInstanceState) {
     }
-
+    
+    public void setTv() {
+        try{
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        tv.setText("123");
+    }
+    
     @Override
     protected void createView(@Nullable Bundle savedInstanceState) {
         super.createView(savedInstanceState);
 
         rootLayout = getView(R.id.test_root);
+        tv = getView(R.id.tv);
         getView(R.id.btn_test_indexSide).setOnClickListener(v -> startActivity(new Intent(mActivity, IndexSideActivity.class)));
         getView(R.id.btn_test_bezier).setOnClickListener(v -> startActivity(new Intent(mActivity, BezierActivity.class)));
         getView(R.id.btn_test_evaluator).setOnClickListener(v -> startActivity(new Intent(mActivity, EvaluatorActivity.class)));
         getView(R.id.btn_test_red_point).setOnClickListener(v -> startActivity(new Intent(mActivity, RedPointActivity.class)));
         getView(R.id.btn_recycler).setOnClickListener(v -> startActivity(new Intent(mActivity, RecyclerDemoActivity.class)));
         getView(R.id.btn_ripper).setOnClickListener(v -> showSnackbar());
+//        getView(R.id.btn_ripper).setOnClickListener(v -> setTv());
         getView(R.id.btn_exit).setOnClickListener(v -> {//点击之后强制下线，重新登录
             Intent intent = new Intent("com.example.broadcastbestpractice.FORCE_OFFLINE");
             mActivity.sendBroadcast(intent);
@@ -75,6 +89,7 @@ public class VideoFragment extends BaseFragment {
         getView(R.id.btn_text_input).setOnClickListener(v -> startActivity(new Intent(mActivity, TextInputDemoActivity.class)));
         getView(R.id.btn_tab_layout).setOnClickListener(v -> startActivity(new Intent(mActivity, TabLayoutDemoActivity.class)));
         getView(R.id.btn_aidl).setOnClickListener(v -> startActivity(new Intent(mActivity, MyAidlActivity.class)));
+        getView(R.id.btn_eventbus).setOnClickListener(v -> startActivity(new Intent(mActivity, EventBusFirstActivity.class)));
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);
 //        Button btnGlide = getView(R.id.btn_glide);

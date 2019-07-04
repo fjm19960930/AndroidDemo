@@ -65,6 +65,7 @@
             android:text="RecyclerViewDemo"
             android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
         <com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView
+            android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="what are you 弄啥呢"
@@ -114,6 +115,16 @@
             android:padding="@dimen/dimens_mid"
             android:gravity="center"
             android:text="AIDLDemo"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_eventbus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="EventBus"
             android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     </LinearLayout>
     <!--<Button-->

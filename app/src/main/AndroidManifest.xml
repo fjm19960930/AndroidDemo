@@ -40,7 +40,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/StartTheme">
 
         <!-- 百度地图开发者秘钥 -->
         <meta-data
@@ -80,6 +80,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".test.indexside.IndexSideActivity" />
+        <activity android:name=".test.bezier.BezierActivity" />
+        <activity android:name=".test.evaluator.EvaluatorActivity" />
+        <activity android:name=".test.redpoint.RedPointActivity" />
+        <activity android:name=".test.recyclerview.RecyclerDemoActivity" />
+        <activity android:name=".activity.TextInputDemoActivity" />
+        <activity android:name=".test.tablelayout.TabLayoutDemoActivity" />
+        <activity android:name=".aidldemo.MyAidlActivity" />
 
         <receiver
             android:name=".receiver.BootReceiver"
@@ -104,22 +112,14 @@
             android:name=".service.StepCounterService"
             android:enabled="true"
             android:exported="true" />
-
-        <activity android:name=".test.indexside.IndexSideActivity" />
-        <activity android:name=".test.bezier.BezierActivity" />
-        <activity android:name=".test.evaluator.EvaluatorActivity" />
-        <activity android:name=".test.redpoint.RedPointActivity" />
-        <activity android:name=".test.recyclerview.RecyclerDemoActivity" />
-        <activity android:name=".activity.TextInputDemoActivity" />
-        <activity android:name=".test.tablelayout.TabLayoutDemoActivity" />
-
         <service
             android:name=".aidldemo.MyAidlService"
             android:enabled="true"
             android:exported="true"
             android:process=":aidl" />
 
-        <activity android:name=".aidldemo.MyAidlActivity"></activity>
+        <activity android:name=".test.eventbus.EventBusFirstActivity" />
+        <activity android:name=".test.eventbus.EventBusSecondActivity"></activity>
     </application>
 
 </manifest>
