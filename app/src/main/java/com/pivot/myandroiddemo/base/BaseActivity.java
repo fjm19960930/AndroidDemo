@@ -123,7 +123,7 @@ public abstract class BaseActivity extends BaseFrameActivity {
         //为了消除app开启时最初那一秒左右的白屏，在AndroidManifest文件中配置主题时用的是自定义的StartTheme主题，
         //然后进入activity后需要将主题重新设置，于是就在activity基类的onCreate方法中来重新设置并且要在super.onCreate之前调用
         //注：当App启动时，空白的启动窗口将保留在屏幕上，直到系统首次完成绘制应用程序。此时，系统进程会交换应用程序的启动窗口，
-        // 允许用户开始与应用程序进行交互。这就是为什么我们的程序启动时会先出现一段时间的黑屏(白屏)。
+        //允许用户开始与应用程序进行交互。这就是为什么我们的程序启动时会先出现一段时间的黑屏(白屏)。
         setTheme(R.style.AppTheme);
         
         super.onCreate(savedInstanceState);
