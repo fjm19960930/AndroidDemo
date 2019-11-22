@@ -119,7 +119,15 @@
             android:process=":aidl" />
 
         <activity android:name=".test.eventbus.EventBusFirstActivity" />
-        <activity android:name=".test.eventbus.EventBusSecondActivity"></activity>
+        <activity android:name=".test.eventbus.EventBusSecondActivity" />
+        <activity android:name=".test.demoanimation.AnimationDemoActivity" />
+        <activity android:name=".test.demoanimation.test1.AnimationTest1Activity" />
+        <activity android:name=".test.demodraw.DrawDemoActivity" />
+        <activity android:name=".test.demodraw.test1.DrawTest1Activity" />
+        <activity android:name=".test.demoview.ViewDemoActivity" />
+        <activity android:name=".test.demoanimation.test2.AnimationTest2Activity" />
+        <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
+        <activity android:name=".test.demoview.test1.ViewTest1Activity"></activity>
     </application>
 
 </manifest>

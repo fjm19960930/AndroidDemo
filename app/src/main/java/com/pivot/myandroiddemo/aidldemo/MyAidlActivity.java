@@ -36,14 +36,13 @@ public class MyAidlActivity extends BaseActivity {
         }
     };
     private TextView mTvResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_aidl);
 
         mTvResult = findViewById(R.id.tv_aidl);
-        
+
         Intent intent1 = new Intent(getApplicationContext(), MyAidlService.class);
         bindService(intent1, mConnection, BIND_AUTO_CREATE);
     }

@@ -126,6 +126,36 @@
             android:gravity="center"
             android:text="EventBus"
             android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_animation_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="动画demo"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_draw_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="绘图demo"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_view_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="视图demo"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     </LinearLayout>
     <!--<Button-->
     <!--android:id="@+id/btnCamera"-->

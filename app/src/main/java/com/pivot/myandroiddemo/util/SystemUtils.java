@@ -4,8 +4,10 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Display;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import java.lang.reflect.Method;
 
@@ -70,5 +72,22 @@ public class SystemUtils {
             }
         }
         return false;
+    }
+
+    /**
+     * dp转px
+     */
+    public static int dp2px(Context context, int value) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, context.getResources().getDisplayMetrics());
+    }
+
+    /**
+     * 显示Toast内容(长)
+     * @param duration:
+     *         Toast.LENGTH_SHORT
+     *         Toast.LENGTH_LONG
+     */
+    public static void showToast(Context context, String str, int duration) {
+        Toast.makeText(context, str, duration).show();
     }
 }

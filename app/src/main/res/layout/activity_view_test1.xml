@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pivot.myandroiddemo.test.demoview.test1.ViewTest1Activity">
+
+    <com.pivot.myandroiddemo.test.demoview.test1.DragScaleView
+        android:id="@+id/drag_scale_view"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"/>
+    <com.pivot.myandroiddemo.test.demoview.test1.DrawBoxView
+        android:id="@+id/draw_box_view"
+        android:layout_width="310dp"
+        android:layout_height="510dp"
+        android:layout_gravity="center"/>
+</FrameLayout>

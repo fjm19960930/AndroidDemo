@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pivot.myandroiddemo.test.demoanimation.test3.AnimationTest3Activity">
+
+    <com.pivot.myandroiddemo.test.demoanimation.test3.LoadingImageView
+        android:id="@+id/iv_anim_test3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    
+    <com.pivot.myandroiddemo.test.demoanimation.test3.HeartLayout
+        android:id="@+id/heart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_anim_test3"/>
+    
+</RelativeLayout>

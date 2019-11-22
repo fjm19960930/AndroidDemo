@@ -40,4 +40,5 @@
 
     <string name="weather_image">天气图片</string>
     <string name="head_image">个人头像</string>
+    <string name="title_activity_draw_test1">DrawTest1Activity</string>
 </resources>

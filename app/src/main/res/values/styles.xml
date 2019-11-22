@@ -5,14 +5,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    
+
     //APP启动优化，去除白屏
+
     <style name="StartTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        //引用上面start_activity_background.xml背景文件        
+        //引用上面start_activity_background.xml背景文件
         <item name="android:windowBackground">@drawable/start_background</item>
-        <item name="android:windowFullscreen">true</item> //填充整个窗口设置
+        <item name="android:windowFullscreen">true</item>
+        //填充整个窗口设置
     </style>
-    
+
     <!-- 弹出框风格 不变暗-->
     <style name="style_dialog" parent="AppTheme">
         <item name="android:windowNoTitle">true</item>
@@ -47,5 +49,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/divider_gray</item>
     </style>
+
+    <style name="StartTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="StartTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
