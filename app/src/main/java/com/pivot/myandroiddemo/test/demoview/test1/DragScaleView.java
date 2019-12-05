@@ -170,69 +170,103 @@ public class DragScaleView extends View {
             case 0:
                 px -= dx;
                 py -= dy;
-                xFlow -= (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-                yFlow -= (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
+                float xOffset = mPosX - mMaxLeftWithScale;
+                float yOffset = mPosY - mMaxTopWithScale;
+                xFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewWidth - xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewHeight - yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 1:
+                px -= dx;
                 py -= dy;
-//                px += px < 0 ? dx : -dx;
-                yFlow -= (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
-//                xFlow += mPosX > 0 ? (mScaleFactor * scale - mScaleFactor) * (mNewWidth / 2) : -(mScaleFactor * scale - mScaleFactor) * (mNewWidth / 2);
+                xOffset = Math.max(mPosX - mMaxLeftWithScale, mPosX - mMaxRightWithScale);
+                yOffset = mPosY - mMaxTopWithScale;
+                xFlow = (xOffset - (mPosX - mMaxLeftWithScale)) < 0.0000001
+                        ? -(mScaleFactor * scale - mScaleFactor) * (mNewWidth - xOffset * 2 / mScaleFactor) * 0.5f
+                        : (mScaleFactor * scale - mScaleFactor) * (mNewWidth + xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewHeight - yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 2:
                 px += dx;
                 py -= dy;
-                xFlow += (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-                yFlow -= (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
+                xOffset = mPosX - mMaxRightWithScale;
+                yOffset = mPosY - mMaxTopWithScale;
+                xFlow = (mScaleFactor * scale - mScaleFactor) * (mNewWidth + xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewHeight - yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 3:
                 px -= dx;
-//                py += py < 0 ? dy : -dy;
-                xFlow -= (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-//                yFlow += mPosY > 0 ? (mScaleFactor * scale - mScaleFactor) * (mNewHeight / 2) : -(mScaleFactor * scale - mScaleFactor) * (mNewHeight / 2);
+                py -= dy;
+                xOffset = mPosX - mMaxLeftWithScale;
+                yOffset = Math.max(mPosY - mMaxTopWithScale, mPosY - mMaxBottomWithScale);
+                xFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewWidth - xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = (yOffset - (mPosY - mMaxTopWithScale)) < 0.0000001
+                        ? -(mScaleFactor * scale - mScaleFactor) * (mNewHeight - yOffset * 2 / mScaleFactor) * 0.5f
+                        : (mScaleFactor * scale - mScaleFactor) * (mNewHeight + yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 4:
                 px += dx;
-//                py += py < 0 ? dy : -dy;
-                xFlow += (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-//                yFlow += mPosY > 0 ? (mScaleFactor * scale - mScaleFactor) * (mNewHeight / 2) : -(mScaleFactor * scale - mScaleFactor) * (mNewHeight / 2);
+                py -= dy;
+                xOffset = mPosX - mMaxRightWithScale;
+                yOffset = Math.max(mPosY - mMaxTopWithScale, mPosY - mMaxBottomWithScale);
+                xFlow = (mScaleFactor * scale - mScaleFactor) * (mNewWidth + xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = (yOffset - (mPosY - mMaxTopWithScale)) < 0.0000001
+                        ? -(mScaleFactor * scale - mScaleFactor) * (mNewHeight - yOffset * 2 / mScaleFactor) * 0.5f
+                        : (mScaleFactor * scale - mScaleFactor) * (mNewHeight + yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 5:
                 px -= dx;
                 py += dy;
-                xFlow -= (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-                yFlow += (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
+                xOffset = mPosX - mMaxLeftWithScale;
+                yOffset = mPosY - mMaxBottomWithScale;
+                xFlow = -(mScaleFactor * scale - mScaleFactor) * (mNewWidth - xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = (mScaleFactor * scale - mScaleFactor) * (mNewHeight + yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 6:
+                px -= dx;
                 py += dy;
-//                px += px < 0 ? dx : -dx;
-                yFlow += (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
-//                xFlow += mPosX > 0 ? (mScaleFactor * scale - mScaleFactor) * (mNewWidth / 2) : -(mScaleFactor * scale - mScaleFactor) * (mNewWidth / 2);
+                xOffset = Math.max(mPosX - mMaxLeftWithScale, mPosX - mMaxRightWithScale);
+                yOffset = mPosY - mMaxBottomWithScale;
+                xFlow = (xOffset - (mPosX - mMaxLeftWithScale)) < 0.0000001
+                        ? -(mScaleFactor * scale - mScaleFactor) * (mNewWidth - xOffset * 2 / mScaleFactor) * 0.5f
+                        : (mScaleFactor * scale - mScaleFactor) * (mNewWidth + xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = (mScaleFactor * scale - mScaleFactor) * (mNewHeight + yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
             case 7:
                 px += dx;
                 py += dy;
-                xFlow += (mScaleFactor * scale - mScaleFactor) * mNewWidth * (0.5f / mScaleFactor);
-                yFlow += (mScaleFactor * scale - mScaleFactor) * mNewHeight * (0.5f / mScaleFactor);
+                xOffset = mPosX - mMaxRightWithScale;
+                yOffset = mPosY - mMaxBottomWithScale;
+                xFlow = (mScaleFactor * scale - mScaleFactor) * (mNewWidth + xOffset * 2 / mScaleFactor) * 0.5f;
+                yFlow = (mScaleFactor * scale - mScaleFactor) * (mNewHeight + yOffset * 2 / mScaleFactor) * 0.5f;
                 break;
         }
         ValueAnimator maxPosAnimator = ValueAnimator.ofObject(new MaxPosEvaluator(), new MaxPosition(mMaxLeft, mMaxRight, mMaxTop, mMaxBottom),
                 new MaxPosition(mMaxLeft - dx, mMaxRight + dx, mMaxTop - dy, mMaxBottom + dy));
         ValueAnimator posAnimator = ValueAnimator.ofObject(new PosEvaluator(), new Position(mPosX, mPosY), new Position(px + xFlow, py + yFlow));
+//        ValueAnimator rectAnimator = ValueAnimator.ofObject(new RectEvaluator(), mRect, new RectF(left, top, right, bottom));
         ValueAnimator scaleAnimator = ValueAnimator.ofFloat(mScaleFactor, mScaleFactor * scale);
-        maxPosAnimator.addUpdateListener(animation -> {
-            mMaxLeft = ((MaxPosition) animation.getAnimatedValue()).getLeft();
-            mMaxRight = ((MaxPosition) animation.getAnimatedValue()).getRight();
-            mMaxTop = ((MaxPosition) animation.getAnimatedValue()).getTop();
-            mMaxBottom = ((MaxPosition) animation.getAnimatedValue()).getBottom();
+        maxPosAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mMaxLeft = ((MaxPosition) animation.getAnimatedValue()).getLeft();
+                mMaxRight = ((MaxPosition) animation.getAnimatedValue()).getRight();
+                mMaxTop = ((MaxPosition) animation.getAnimatedValue()).getTop();
+                mMaxBottom = ((MaxPosition) animation.getAnimatedValue()).getBottom();
+            }
         });
-        posAnimator.addUpdateListener(animation -> {
-            mPosX = ((Position) animation.getAnimatedValue()).getPx();
-            mPosY = ((Position) animation.getAnimatedValue()).getPy();
+        posAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mPosX = ((Position) animation.getAnimatedValue()).getPx();
+                mPosY = ((Position) animation.getAnimatedValue()).getPy();
+            }
         });
-        scaleAnimator.addUpdateListener(animation -> {
-            mScaleFactor = (float) animation.getAnimatedValue();
-            invalidate();
+        scaleAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mScaleFactor = (float) animation.getAnimatedValue();
+                invalidate();
+            }
         });
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(maxPosAnimator, posAnimator, scaleAnimator);
@@ -244,24 +278,31 @@ public class DragScaleView extends View {
     /**
      * 不能超出边界
      */
+    private float mMaxRightWithScale;//算上图片放大后多出来的宽高，图片向右平移所能移到的最远距离
+    private float mMaxLeftWithScale;//算上图片放大后多出来的宽高，图片向左平移所能移到的最远距离
+    private float mMaxBottomWithScale;//算上图片放大后多出来的宽高，图片向下平移所能移到的最远距离
+    private float mMaxTopWithScale;//算上图片放大后多出来的宽高，图片向上平移所能移到的最远距离
     private void checkBounds() {
         if (mScaleFactor >= getWidth() / mNewWidth) {
             //宽度方向已经填满
-            mPosX = Math.min(mPosX, (mScaleFactor - 1) * (mNewWidth / 2) + mMaxRight);//最右
-            mPosX = Math.max(mPosX, getWidth() - mNewWidth - (mScaleFactor - 1) * (mNewWidth / 2) + mMaxLeft);//最左
+            mPosX = Math.min(mPosX, (mScaleFactor - 1) * (mNewWidth / 2) + mMaxRight);//最右 mPosX<=
+            mPosX = Math.max(mPosX, getWidth() - mNewWidth - (mScaleFactor - 1) * (mNewWidth / 2) + mMaxLeft);//最左 mPosX>=
         } else {
             mPosX = Math.max(mPosX, (mScaleFactor - 1) * (mNewWidth / 2));
             mPosX = Math.min(mPosX, getWidth() - mNewWidth - (mScaleFactor - 1) * (mNewWidth / 2));
         }
-
+        mMaxRightWithScale = (mScaleFactor - 1) * (mNewWidth / 2) + mMaxRight;
+        mMaxLeftWithScale = getWidth() - mNewWidth - (mScaleFactor - 1) * (mNewWidth / 2) + mMaxLeft;
         if (mScaleFactor >= getHeight() / mNewHeight) {
             //高度方向已经填满
-            mPosY = Math.min(mPosY, (mScaleFactor - 1) * (mNewHeight / 2) + mMaxBottom);//最下
-            mPosY = Math.max(mPosY, getHeight() - mNewHeight - (mScaleFactor - 1) * (mNewHeight / 2) + mMaxTop);//最上
+            mPosY = Math.min(mPosY, (mScaleFactor - 1) * (mNewHeight / 2) + mMaxBottom);//最下 mPosY<=
+            mPosY = Math.max(mPosY, getHeight() - mNewHeight - (mScaleFactor - 1) * (mNewHeight / 2) + mMaxTop);//最上 mPosY>=
         } else {
             mPosY = Math.max(mPosY, (mScaleFactor - 1) * (mNewHeight / 2));
             mPosY = Math.min(mPosY, getHeight() - mNewHeight - (mScaleFactor - 1) * (mNewHeight / 2));
         }
+        mMaxBottomWithScale = (mScaleFactor - 1) * (mNewHeight / 2) + mMaxBottom;
+        mMaxTopWithScale = getHeight() - mNewHeight - (mScaleFactor - 1) * (mNewHeight / 2) + mMaxTop;
     }
 
     //缩放
