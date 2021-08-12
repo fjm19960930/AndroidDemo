@@ -13,7 +13,7 @@ import com.pivot.myandroiddemo.base.BaseActivity;
 import com.pivot.myandroiddemo.fragment.MainFragment;
 import com.pivot.myandroiddemo.fragment.MapFragment;
 import com.pivot.myandroiddemo.fragment.NewsFragment;
-import com.pivot.myandroiddemo.fragment.VideoFragment;
+import com.pivot.myandroiddemo.fragment.TestFragment;
 import com.pivot.myandroiddemo.service.StepCounterService;
 import com.pivot.myandroiddemo.util.ScaleInOutTransformer;
 import com.pivot.myandroiddemo.util.SystemUtils;
@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity {
         listFragment.add(MainFragment.newInstance());
         listFragment.add(MapFragment.newInstance());
         listFragment.add(NewsFragment.newInstance());
-        listFragment.add(VideoFragment.newInstance());
+        listFragment.add(TestFragment.newInstance());
         initView();
 
         ToastUtil.toastLong(SystemUtils.isServiceRunning(mActivity, "com.pivot.myandroiddemo.service.StepCounterService") + "");

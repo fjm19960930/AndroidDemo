@@ -11,6 +11,7 @@ import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.activity.TextInputDemoActivity;
 import com.pivot.myandroiddemo.aidldemo.MyAidlActivity;
 import com.pivot.myandroiddemo.base.BaseFragment;
+import com.pivot.myandroiddemo.scrollbar.ScrollBarActivity;
 import com.pivot.myandroiddemo.test.bezier.BezierActivity;
 import com.pivot.myandroiddemo.test.demoanimation.AnimationDemoActivity;
 import com.pivot.myandroiddemo.test.demodraw.DrawDemoActivity;
@@ -27,14 +28,14 @@ import com.zcolin.frame.util.ToastUtil;
 /**
  * @author ASUS
  */
-public class VideoFragment extends BaseFragment {
+public class TestFragment extends BaseFragment {
 
     private LinearLayout rootLayout;
     private ShimmerTextView tv;
 
-    public static VideoFragment newInstance() {
+    public static TestFragment newInstance() {
         Bundle args = new Bundle();
-        VideoFragment fragment = new VideoFragment();
+        TestFragment fragment = new TestFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -96,6 +97,7 @@ public class VideoFragment extends BaseFragment {
         getView(R.id.btn_animation_test).setOnClickListener(v -> startActivity(new Intent(mActivity, AnimationDemoActivity.class)));
         getView(R.id.btn_draw_test).setOnClickListener(v -> startActivity(new Intent(mActivity, DrawDemoActivity.class)));
         getView(R.id.btn_view_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ViewDemoActivity.class)));
+        getView(R.id.btn_scroll_bar_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ScrollBarActivity.class)));
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);
 //        Button btnGlide = getView(R.id.btn_glide);

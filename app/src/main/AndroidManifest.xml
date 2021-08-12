@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pivot.myandroiddemo">
-
     <!-- 获取设备网络状态，禁用后无法获取网络状态 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 网络权限，当禁用后，无法进行检索等相关业务 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 读取设备硬件信息，统计数据 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 读取系统信息，包含系统版本等信息，用作统计 -->
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <!-- 获取设备的网络状态，鉴权所需网络代理 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 允许sd卡写权限，需写入地图数据，禁用后无法显示地图 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 获取统计数据 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- 使用步行AR导航，配置Camera权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <!-- 读取手机通讯录的权限 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <!-- 监听系统开机广播权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-
     <application
         android:name=".application.MainApplication"
         android:allowBackup="true"
@@ -41,35 +10,14 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/StartTheme">
-
         <!-- 百度地图开发者秘钥 -->
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="jo3K2vBcV6sqLEBGMNIxFiNVAbPv0vQ3" />
-
-        <!-- 百度地图服务 -->
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.pivot.myandroiddemo.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-
-            <!-- 提供共享路径 -->
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask" /> <!-- 百度地图服务 -->
         <activity android:name=".activity.MineDetailsActivity" />
+
         <activity android:name=".activity.NewsWebActivity" />
+
         <activity android:name=".LoginActivity" />
         <activity android:name=".activity.CameraActivity" />
         <activity android:name=".RegisterActivity" />
@@ -88,7 +36,34 @@
         <activity android:name=".activity.TextInputDemoActivity" />
         <activity android:name=".test.tablelayout.TabLayoutDemoActivity" />
         <activity android:name=".aidldemo.MyAidlActivity" />
+        <activity android:name=".test.eventbus.EventBusFirstActivity" />
+        <activity android:name=".test.eventbus.EventBusSecondActivity" />
+        <activity android:name=".test.demoanimation.AnimationDemoActivity" />
 
+        <activity android:name=".test.demoanimation.test1.AnimationTest1Activity" />
+        <activity android:name=".test.demodraw.DrawDemoActivity" />
+
+        <activity android:name=".test.demodraw.test1.DrawTest1Activity" />
+        <activity android:name=".test.demoview.ViewDemoActivity" />
+
+        <activity android:name=".test.demoanimation.test2.AnimationTest2Activity" />
+        <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
+        <activity android:name=".test.demoview.test1.ViewTest1Activity" />
+        <activity android:name=".scrollbar.ScrollBarActivity"/>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="jo3K2vBcV6sqLEBGMNIxFiNVAbPv0vQ3" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.pivot.myandroiddemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 提供共享路径 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
         <receiver
             android:name=".receiver.BootReceiver"
             android:enabled="true"
@@ -107,7 +82,10 @@
                 <action android:name="mrkj.healthylife.SETALARM" />
             </intent-filter>
         </receiver>
-
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
         <service
             android:name=".service.StepCounterService"
             android:enabled="true"
@@ -117,17 +95,23 @@
             android:enabled="true"
             android:exported="true"
             android:process=":aidl" />
+    </application> <!-- 网络权限，当禁用后，无法进行检索等相关业务 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 读取设备硬件信息，统计数据 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 读取系统信息，包含系统版本等信息，用作统计 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备的网络状态，鉴权所需网络代理 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 允许sd卡写权限，需写入地图数据，禁用后无法显示地图 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 获取统计数据 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 使用步行AR导航，配置Camera权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 读取手机通讯录的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 监听系统开机广播权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-        <activity android:name=".test.eventbus.EventBusFirstActivity" />
-        <activity android:name=".test.eventbus.EventBusSecondActivity" />
-        <activity android:name=".test.demoanimation.AnimationDemoActivity" />
-        <activity android:name=".test.demoanimation.test1.AnimationTest1Activity" />
-        <activity android:name=".test.demodraw.DrawDemoActivity" />
-        <activity android:name=".test.demodraw.test1.DrawTest1Activity" />
-        <activity android:name=".test.demoview.ViewDemoActivity" />
-        <activity android:name=".test.demoanimation.test2.AnimationTest2Activity" />
-        <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
-        <activity android:name=".test.demoview.test1.ViewTest1Activity"></activity>
-    </application>
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
 </manifest>

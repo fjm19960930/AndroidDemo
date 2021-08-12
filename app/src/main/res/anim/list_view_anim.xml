@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--在layoutAnimation中，只有三个字段是有效的，分别是：android:delay、android:animationOrder和android:animation；
+其它诸如android:duration、android:interpolator等针对animation的字段都是无效的-->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:delay="1"
+    android:animationOrder="normal"
+    android:animation="@anim/slide_in_left"/>

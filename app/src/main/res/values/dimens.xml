@@ -47,4 +47,6 @@
     <dimen name="text_before_width">5dp</dimen>
     <dimen name="text_before_height">14dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="scroll_bar_height">64dp</dimen>
+    <dimen name="scroll_bar_width">48dp</dimen>
 </resources>

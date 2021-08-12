@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.pivot.myandroiddemo.fragment.VideoFragment">
+    tools:context="com.pivot.myandroiddemo.fragment.TestFragment">
     
     <LinearLayout
         android:id="@+id/test_root"
@@ -155,6 +155,16 @@
             android:padding="@dimen/dimens_mid"
             android:gravity="center"
             android:text="视图demo"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_scroll_bar_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="ListView可拖拽自定义滚动条"
             android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     </LinearLayout>
     <!--<Button-->

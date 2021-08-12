@@ -51,7 +51,7 @@ public class EventBusFirstActivity extends BaseActivity {
      * onEventMainThread都会在UI线程中执行，接收事件就会在UI线程中运行，这个在Android中是非常有用的，
      * 因为在Android中只能在UI线程中跟新UI，所以在onEvnetMainThread方法中是不能执行耗时操作的
      */
-    @Subscribe(threadMode = ThreadMode.MAIN)
+    @Subscribe(threadMode = ThreadMode.ASYNC)
     public void onEventMainThread123(MyEvent event) {
         String msg = "onEventMainThread收到了消息：" + event.getmMsg();
         tv.setText(msg);

@@ -228,20 +228,17 @@ public abstract class BaseActivity extends BaseFrameActivity {
         if (activityParam[INDEX_ISSHOWTOOLBAR] && !activityParam[INDEX_ISFULLSCREEN]) {
             super.setContentView(initToolBar(view));
             setSupportActionBar(toolbar);
-
             if (activityParam[INDEX_ISSHOWRETURN]) {
                 setToolbarLeftBtnText(" ");
                 setToolbarLeftBtnCompoundDrawableLeft(R.drawable.gui_icon_arrow_back);
             }
         } else {
             super.setContentView(view);
-
             if (activityParam[INDEX_ISIMMERSE] && activityParam[INDEX_ISIMMERSEPADDINGTOP] && !activityParam[INDEX_ISSHOWTOOLBAR]) {
                 ViewGroup viewGroup = (ViewGroup) ((ViewGroup) findViewById(android.R.id.content)).getChildAt(0);
                 viewGroup.setPadding(0, ScreenUtil.getStatusBarHeight(this), 0, 0);
             }
         }
-
         injectZClick();
     }
 
@@ -527,8 +524,8 @@ public abstract class BaseActivity extends BaseFrameActivity {
     }
 
     /*
-             * 预置按钮的点击事件类 
-             */
+     * 预置按钮的点击事件类
+     */
     private class BaseClickListener implements View.OnClickListener {
 
         @Override
