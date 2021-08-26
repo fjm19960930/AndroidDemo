@@ -11,6 +11,7 @@ import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.activity.TextInputDemoActivity;
 import com.pivot.myandroiddemo.aidldemo.MyAidlActivity;
 import com.pivot.myandroiddemo.base.BaseFragment;
+import com.pivot.myandroiddemo.kotlin.KotlinMainActivity;
 import com.pivot.myandroiddemo.scrollbar.ScrollBarActivity;
 import com.pivot.myandroiddemo.test.bezier.BezierActivity;
 import com.pivot.myandroiddemo.test.demoanimation.AnimationDemoActivity;
@@ -98,6 +99,7 @@ public class TestFragment extends BaseFragment {
         getView(R.id.btn_draw_test).setOnClickListener(v -> startActivity(new Intent(mActivity, DrawDemoActivity.class)));
         getView(R.id.btn_view_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ViewDemoActivity.class)));
         getView(R.id.btn_scroll_bar_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ScrollBarActivity.class)));
+        getView(R.id.btn_kotlin_test).setOnClickListener(v -> startActivity(new Intent(mActivity, KotlinMainActivity.class)));
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);
 //        Button btnGlide = getView(R.id.btn_glide);
