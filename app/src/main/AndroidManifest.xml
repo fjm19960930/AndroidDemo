@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pivot.myandroiddemo">
-    <!-- 读取系统信息，包含系统版本等信息，用作统计 -->
+    <!-- 获取设备的网络状态，鉴权所需网络代理 -->
     <application
         android:name=".application.MainApplication"
         android:allowBackup="true"
@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/StartTheme">
+        <activity android:name=".retrofit.RetrofitDemoActivity"></activity>
         <activity android:name=".kotlin.CoroutineDemoActivity" />
         <activity
             android:name=".MainActivity"
@@ -45,8 +46,7 @@
         <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
         <activity android:name=".test.demoview.test1.ViewTest1Activity" />
         <activity android:name=".scrollbar.ScrollBarActivity" />
-        <activity android:name=".kotlin.KotlinMainActivity" />
-        <!-- 百度地图开发者秘钥 -->
+        <activity android:name=".kotlin.KotlinMainActivity" /> <!-- 百度地图开发者秘钥 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="jo3K2vBcV6sqLEBGMNIxFiNVAbPv0vQ3" />
@@ -95,16 +95,16 @@
             android:enabled="true"
             android:exported="true"
             android:process=":aidl" />
-    </application> <!-- 获取设备的网络状态，鉴权所需网络代理 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许sd卡写权限，需写入地图数据，禁用后无法显示地图 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 获取统计数据 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 使用步行AR导航，配置Camera权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 读取手机通讯录的权限 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 监听系统开机广播权限 -->
+    </application> <!-- 允许sd卡写权限，需写入地图数据，禁用后无法显示地图 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取统计数据 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 使用步行AR导航，配置Camera权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 读取手机通讯录的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 监听系统开机广播权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />

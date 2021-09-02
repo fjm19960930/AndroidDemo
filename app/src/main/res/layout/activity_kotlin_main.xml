@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".kotlin.KotlinMainActivity">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tb_header"
+<layout>
+    <data>
+        <variable
+            name="tv1"
+            type="String" />
+        <variable
+            name="tv1_click"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".kotlin.KotlinMainActivity">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        style="@style/TextStyle_White_Normal"
-        android:id="@+id/btn_demo_coroutine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimens_small"
-        android:padding="@dimen/dimens_mid"
-        android:gravity="center"
-        android:text="协程"
-        android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
-</LinearLayout>
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_demo_coroutine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="协程"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+
+        <TextView
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/tv_demo_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="@{tv1}"
+            android:onClick="@{tv1_click}"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+    </LinearLayout>
+</layout>

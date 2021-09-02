@@ -1,27 +1,36 @@
 package com.pivot.myandroiddemo.kotlin
 
 import android.content.Intent
+import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.os.Bundle
-import android.os.SystemClock
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import com.pivot.myandroiddemo.R
+import com.pivot.myandroiddemo.databinding.ActivityKotlinMainBinding
 import kotlinx.android.synthetic.main.activity_kotlin_main.*
 import java.util.concurrent.*
 
 class KotlinMainActivity : AppCompatActivity() {
+    private lateinit var dataBinding: ActivityKotlinMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin_main)
-        tb_header.title = "一个标题"
-        tb_header.subtitle = "一个副标题"
-        tb_header.setBackgroundColor(Color.parseColor("#3385FF"))
+        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_kotlin_main)
+        dataBinding.apply { 
+            tv1 = "binding1"
+            tv1Click = View.OnClickListener { 
+                tv1 = "binding1_click"
+            }
+        }
+        dataBinding.tbHeader.title = "一个标题"
+        dataBinding.tbHeader.subtitle = "一个副标题"
+        dataBinding.tbHeader.setBackgroundColor(Color.parseColor("#3385FF"))
         
         //使用ToolBar替换系统自带的ActionBar
         setSupportActionBar(tb_header)
-        tb_header.setNavigationIcon(R.drawable.gui_icon_arrow_back)
+        dataBinding.tbHeader.setNavigationIcon(R.drawable.gui_icon_arrow_back)
         //设置导航键的点击事件必须在setSupportActionBar之后，否则不起作用
-        tb_header.setNavigationOnClickListener { 
+        dataBinding.tbHeader.setNavigationOnClickListener { 
             finish()
         }
         
@@ -42,8 +51,8 @@ class KotlinMainActivity : AppCompatActivity() {
 //
 //        var singleThreadExecutor: ExecutorService = Executors.newSingleThreadExecutor()
 //        singleThreadExecutor.execute(command)
-        
-        btn_demo_coroutine.setOnClickListener {
+
+        dataBinding.btnDemoCoroutine.setOnClickListener {
             val i = Intent(this@KotlinMainActivity, CoroutineDemoActivity::class.java)
             i.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             startActivity(i)
