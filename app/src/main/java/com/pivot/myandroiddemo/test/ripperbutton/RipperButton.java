@@ -15,7 +15,7 @@ import android.view.animation.AccelerateInterpolator;
  * 点击产生水波动画的按钮
  * @author fjm
  */
-public class RipperButton extends android.support.v7.widget.AppCompatButton{
+public class RipperButton extends androidx.appcompat.widget.AppCompatButton{
     private int mX, mY;
     private ObjectAnimator mAnimator;
     private static int DEFAULT_RADIUS = 50;

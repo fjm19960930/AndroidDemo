@@ -124,7 +124,7 @@ public class HeartLayout extends RelativeLayout {
         });
     }
     
-    public class HeartImageView extends android.support.v7.widget.AppCompatImageView {
+    public class HeartImageView extends androidx.appcompat.widget.AppCompatImageView {
         private Bitmap image;
 
         public HeartImageView(Context context) {

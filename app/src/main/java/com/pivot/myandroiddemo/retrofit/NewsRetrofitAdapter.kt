@@ -2,7 +2,7 @@ package com.pivot.myandroiddemo.retrofit
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,17 +27,17 @@ class NewsRetrofitAdapter() : RecyclerView.Adapter<NewsRetrofitAdapter.MyHolder>
         notifyDataSetChanged()
     }
     
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyHolder {
-        return MyHolder((LayoutInflater.from(parent?.context).inflate(R.layout.news_item_layout, parent, false)))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+        return MyHolder((LayoutInflater.from(parent.context).inflate(R.layout.news_item_layout, parent, false)))
     }
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
-        val data = mDatas.get(position)
-        holder.newsTitle.text = data.title ?: ""
-        holder.newsAuthor.text = data.author_name ?: ""
-        holder.newsDate.text = data.date ?: ""
+        val data = mDatas[position]
+        holder.newsTitle?.text = data.title ?: ""
+        holder.newsAuthor?.text = data.author_name ?: ""
+        holder.newsDate?.text = data.date ?: ""
         ImageLoaderUtils.displayImage<Context, String>(mContext, data.thumbnail_pic_s, holder.newsImage)
-        holder.newsItemLayout.setOnClickListener {
+        holder.newsItemLayout?.setOnClickListener {
             val intent = Intent(mContext, NewsWebActivity::class.java)
             intent.putExtra("newsUrl", data.url)
             mContext?.startActivity(intent)
@@ -48,11 +48,18 @@ class NewsRetrofitAdapter() : RecyclerView.Adapter<NewsRetrofitAdapter.MyHolder>
         return mDatas.size
     }
     
-    class MyHolder(itemView: View?) : RecyclerView.ViewHolder(itemView){
-        var newsItemLayout: View = itemView?.findViewById(R.id.layout_news_item)!!
-        var newsTitle: TextView = itemView?.findViewById(R.id.tv_news_title)!!
-        var newsAuthor: TextView = itemView?.findViewById(R.id.tv_news_author)!!
-        var newsDate: TextView = itemView?.findViewById(R.id.tv_news_date)!!
-        var newsImage: ImageView = itemView?.findViewById(R.id.iv_news_item)!!
+    class MyHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!){
+        var newsItemLayout: View? = null
+        var newsTitle: TextView? = null
+        var newsAuthor: TextView? = null
+        var newsDate: TextView? = null
+        var newsImage: ImageView? = null
+        init {
+            newsItemLayout = itemView?.findViewById(R.id.layout_news_item)!!
+            newsTitle = itemView.findViewById(R.id.tv_news_title)!!
+            newsAuthor = itemView.findViewById(R.id.tv_news_author)!!
+            newsDate = itemView.findViewById(R.id.tv_news_date)!!
+            newsImage = itemView.findViewById(R.id.iv_news_item)!!
+        }
     }
 }

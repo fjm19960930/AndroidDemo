@@ -1,7 +1,7 @@
 package com.pivot.myandroiddemo.test.redpoint;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pivot.myandroiddemo.R;
 

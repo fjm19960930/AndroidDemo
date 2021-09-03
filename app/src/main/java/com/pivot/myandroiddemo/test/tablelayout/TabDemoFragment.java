@@ -1,7 +1,7 @@
 package com.pivot.myandroiddemo.test.tablelayout;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.base.BaseFragment;

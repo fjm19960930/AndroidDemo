@@ -1,7 +1,8 @@
 package com.pivot.myandroiddemo.retrofit
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.pivot.myandroiddemo.R
 import com.pivot.myandroiddemo.entity.NewsReply
 import kotlinx.android.synthetic.main.activity_retrofit_demo.*
@@ -21,6 +22,10 @@ class RetrofitDemoActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)//添加默认的返回图标
         supportActionBar?.setHomeButtonEnabled(true)//设置返回键可用
+        // 设置导航（返回图片）的点击事件
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         val retrofit = Retrofit.Builder()
                 .client(OkHttpClient.Builder()
@@ -38,9 +43,11 @@ class RetrofitDemoActivity : AppCompatActivity() {
             override fun onResponse(call: Call<NewsReply>, response: Response<NewsReply>) {
                 val entity = response.body()!!.result
                 if (entity.data.isNotEmpty()) {
-                    val adapter = NewsRetrofitAdapter(this@RetrofitDemoActivity)
-                    adapter.setDatas(entity.data)
-                    recycler_view.adapter = adapter
+                    val gridLayoutManager = GridLayoutManager(this@RetrofitDemoActivity, 1)
+                    retrofit_recycler_view.layoutManager = gridLayoutManager
+                    val newsRetrofitAdapter = NewsRetrofitAdapter(this@RetrofitDemoActivity)
+                    newsRetrofitAdapter.setDatas(entity.data)
+                    retrofit_recycler_view.adapter = newsRetrofitAdapter
                 }
             }
 

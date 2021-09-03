@@ -3,7 +3,7 @@ package com.pivot.myandroiddemo.test.demoanimation.test3;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
@@ -13,7 +13,7 @@ import com.pivot.myandroiddemo.R;
  * Created by ASUS on 2019/9/24.
  */
 
-public class LoadingImageView extends android.support.v7.widget.AppCompatImageView {
+public class LoadingImageView extends androidx.appcompat.widget.AppCompatImageView {
     private int mTop;
     private int mCurrentImgIndex = 0;//当前图片下标
     private int mImgCount = 4;//动画图片数量

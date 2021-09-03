@@ -1,9 +1,9 @@
 package com.pivot.myandroiddemo.test.recyclerview;
 
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.base.BaseActivity;

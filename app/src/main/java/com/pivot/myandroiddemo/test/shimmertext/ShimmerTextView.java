@@ -16,7 +16,7 @@ import com.pivot.myandroiddemo.R;
  * 发光文本
  * 参考自：https://blog.csdn.net/harvic880925/article/details/52350154
  */
-public class ShimmerTextView extends android.support.v7.widget.AppCompatTextView {
+public class ShimmerTextView extends androidx.appcompat.widget.AppCompatTextView {
     private Paint mPaint;
     private int mDx;
     private LinearGradient mLinearGradient;

@@ -7,7 +7,7 @@
     android:padding="@dimen/dimens_small"
     tools:context="com.pivot.myandroiddemo.test.indexside.IndexSideActivity">
     
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

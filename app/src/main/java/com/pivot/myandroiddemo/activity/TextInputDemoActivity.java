@@ -1,7 +1,7 @@
 package com.pivot.myandroiddemo.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputLayout;
 
 import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.base.BaseActivity;

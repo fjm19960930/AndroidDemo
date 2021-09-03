@@ -3,7 +3,6 @@ package com.pivot.myandroiddemo.fragment;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -26,6 +25,8 @@ import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.base.BaseFragment;
 import com.pivot.myandroiddemo.base.FragmentParam;
 import com.zcolin.frame.util.SPUtil;
+
+import androidx.annotation.Nullable;
 
 import static com.baidu.mapapi.map.MapViewLayoutParams.ALIGN_LEFT;
 import static com.baidu.mapapi.map.MapViewLayoutParams.ALIGN_TOP;

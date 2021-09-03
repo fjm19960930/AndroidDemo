@@ -3,11 +3,11 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/id_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_size"
         android:background="@color/white">
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 </FrameLayout>
