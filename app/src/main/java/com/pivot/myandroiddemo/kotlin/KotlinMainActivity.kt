@@ -1,14 +1,17 @@
 package com.pivot.myandroiddemo.kotlin
 
 import android.content.Intent
-import androidx.databinding.DataBindingUtil
 import android.graphics.Color
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.pivot.myandroiddemo.R
 import com.pivot.myandroiddemo.databinding.ActivityKotlinMainBinding
+import com.pivot.myandroiddemo.livedata.FortuneActivity
+import com.pivot.myandroiddemo.retrofit.RetrofitDemoActivity
 import kotlinx.android.synthetic.main.activity_kotlin_main.*
+import java.util.*
 import java.util.concurrent.*
 
 class KotlinMainActivity : AppCompatActivity() {
@@ -34,8 +37,8 @@ class KotlinMainActivity : AppCompatActivity() {
             finish()
         }
         
-//        var command = Runnable { 
-//            SystemClock.setCurrentTimeMillis(2000)
+//        var command = Runnable {
+//            getNetTime()
 //        }
 //        var fixedThreadPool: ExecutorService = Executors.newFixedThreadPool(4)
 //        fixedThreadPool.execute(command)
@@ -57,5 +60,36 @@ class KotlinMainActivity : AppCompatActivity() {
             i.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             startActivity(i)
         }
+
+        dataBinding.btnRetrofitTest.setOnClickListener {
+            val i = Intent(this@KotlinMainActivity, RetrofitDemoActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+            startActivity(i)
+        }
+
+        dataBinding.btnRetrofitTest.setOnClickListener {
+            val i = Intent(this@KotlinMainActivity, RetrofitDemoActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+            startActivity(i)
+        }
+        
+        dataBinding.btnLiveData.setOnClickListener {
+            val i = Intent(this@KotlinMainActivity, FortuneActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+            startActivity(i)
+        }
     }
+
+//    private fun getNetTime() {
+//        var c = Calendar.getInstance();
+//        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+//        var mYear = c.get(Calendar.YEAR);//年
+//        var mMonth = c.get(Calendar.MONTH) + 1;//月
+//        var mDay = c.get(Calendar.DAY_OF_MONTH);//日
+//        var mHour = c.get(Calendar.HOUR_OF_DAY);//24小时格式    HOUR(12小时格式)
+//        var  mMinute = c.get(Calendar.MINUTE);//分
+//        var  mSecond = c.get(Calendar.SECOND);//秒
+//        var time="$mYear-$mMonth-$mDay $mHour:$mMinute:$mSecond"
+//        Toast.makeText(this, "当前网络时间为: \n$time", Toast.LENGTH_SHORT).show()
+//    }
 }

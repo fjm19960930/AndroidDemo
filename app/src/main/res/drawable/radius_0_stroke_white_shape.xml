@@ -19,8 +19,6 @@
         android:dashWidth="0dip"
         android:dashGap="10dip"
         android:color="@color/gray_disable"/>
-    <corners 
-        android:radius="10dp"/>
     <solid
         android:color="@color/gray_disable"/>
 </shape>

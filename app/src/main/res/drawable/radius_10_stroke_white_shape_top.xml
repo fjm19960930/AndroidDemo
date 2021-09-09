@@ -20,7 +20,8 @@
         android:dashGap="10dip"
         android:color="@color/gray_disable"/>
     <corners 
-        android:radius="10dp"/>
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"/>
     <solid
         android:color="@color/gray_disable"/>
 </shape>

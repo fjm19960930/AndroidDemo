@@ -94,4 +94,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+
+    implementation "com.github.z-pivot:ZChart:1.1.2"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'org.xclcharts:lib:2.4'
 }

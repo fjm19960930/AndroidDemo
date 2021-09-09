@@ -42,5 +42,27 @@
             android:text="@{tv1}"
             android:onClick="@{tv1_click}"
             android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_retrofit_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="retrofit"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
+
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_live_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="Livedata"
+            android:background="@drawable/radius_10_no_stroke_black66_bg_shape"/>
     </LinearLayout>
 </layout>

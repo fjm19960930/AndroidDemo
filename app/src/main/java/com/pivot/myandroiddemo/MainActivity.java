@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.fragment.app.Fragment;
 import android.util.TypedValue;
 
 import com.pivot.myandroiddemo.adpter.ChildPagerAdapter;
@@ -27,6 +26,8 @@ import com.zcolin.gui.ZTabView;
 import com.zcolin.gui.ZViewPager;
 
 import java.util.ArrayList;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * @author ASUS
