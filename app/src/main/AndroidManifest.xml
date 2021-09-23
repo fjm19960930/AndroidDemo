@@ -50,7 +50,7 @@
         <activity android:name=".kotlin.KotlinMainActivity" /> <!-- 百度地图开发者秘钥 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="jo3K2vBcV6sqLEBGMNIxFiNVAbPv0vQ3" />
+            android:value="h1R8KmYLxMICrlXtgEnG94N5GpFmSHB4" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

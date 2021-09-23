@@ -17,7 +17,7 @@ import okhttp3.Response;
  * 天气业务管理类
  */
 public class WeatherMgr {
-    private static final String WEATHER_URL = "http://apis.juhe.cn/simpleWeather/query?city=%s&key=cfe8e8bb2a5a51cecdd87c21f3467714";
+    private static final String WEATHER_URL = "https://apis.juhe.cn/simpleWeather/query?city=%s&key=cfe8e8bb2a5a51cecdd87c21f3467714";
 
     /**
      * 请求天气数据
