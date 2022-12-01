@@ -1,5 +1,7 @@
 package com.pivot.myandroiddemo.biz;
 
+import android.app.Activity;
+
 import com.pivot.myandroiddemo.entity.NewsEntity;
 import com.pivot.myandroiddemo.entity.NewsReply;
 import com.zcolin.frame.http.ZHttp;
@@ -17,9 +19,9 @@ public class NewsMgr {
     /**
      * 请求新闻数据
      */
-    public static void requestNewsInfo(String newsType, OnGetNewsFinishListener listener) {
+    public static void requestNewsInfo(String newsType, Activity activity, OnGetNewsFinishListener listener) {
         String newsUrl = String.format(NEWS_URL, newsType);
-        ZHttp.get(newsUrl, new ZResponse<NewsReply>(NewsReply.class) {
+        ZHttp.get(newsUrl, new ZResponse<NewsReply>(NewsReply.class, activity, "123") {
             @Override
             public void onSuccess(Response response, NewsReply resObj) {
                 if (listener != null) {

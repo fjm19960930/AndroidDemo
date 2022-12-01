@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 
 class FortuneViewModel: ViewModel() {
     val mDayFortuneLiveData = MutableLiveData<DayFortuneBean>()
-    
+
     fun getFortuneData(fortuneData: String) {
         val retrofit = Retrofit.Builder()
                 .client(OkHttpClient.Builder()

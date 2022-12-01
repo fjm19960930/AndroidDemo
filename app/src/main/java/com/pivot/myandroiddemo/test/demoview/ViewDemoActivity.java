@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.pivot.myandroiddemo.R;
 import com.pivot.myandroiddemo.base.BaseActivity;
 import com.pivot.myandroiddemo.test.demoview.test1.ViewTest1Activity;
+import com.pivot.myandroiddemo.test.demoview.test2.ViewTest2Activity;
 
 public class ViewDemoActivity extends BaseActivity {
 
@@ -18,5 +19,6 @@ public class ViewDemoActivity extends BaseActivity {
         setToolBarBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
         getView(R.id.btn_view_test1).setOnClickListener(v -> startActivity(new Intent(mActivity, ViewTest1Activity.class)));
+        getView(R.id.btn_view_test2).setOnClickListener(v -> startActivity(new Intent(mActivity, ViewTest2Activity.class)));
     }
 }

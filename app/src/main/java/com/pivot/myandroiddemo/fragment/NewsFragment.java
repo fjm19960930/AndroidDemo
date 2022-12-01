@@ -131,7 +131,7 @@ public class NewsFragment extends BaseFragment {
      * 请求新闻数据
      */
     private void requestNewsDate(String type) {
-        NewsMgr.requestNewsInfo(type, new NewsMgr.OnGetNewsFinishListener() {
+        NewsMgr.requestNewsInfo(type, getActivity(), new NewsMgr.OnGetNewsFinishListener() {
             @Override
             public void onSuccess(NewsEntity news) {
                 List<String> mainImgUrl = new ArrayList<>();

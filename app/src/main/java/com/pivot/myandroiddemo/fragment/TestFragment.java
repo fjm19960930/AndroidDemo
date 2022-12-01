@@ -22,6 +22,7 @@ import com.pivot.myandroiddemo.test.eventbus.EventBusFirstActivity;
 import com.pivot.myandroiddemo.test.indexside.IndexSideActivity;
 import com.pivot.myandroiddemo.test.recyclerview.RecyclerDemoActivity;
 import com.pivot.myandroiddemo.test.redpoint.RedPointActivity;
+import com.pivot.myandroiddemo.test.rx.RxJavaDemoActivity;
 import com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView;
 import com.pivot.myandroiddemo.test.tablelayout.TabLayoutDemoActivity;
 import com.zcolin.frame.util.ToastUtil;
@@ -100,6 +101,7 @@ public class TestFragment extends BaseFragment {
         getView(R.id.btn_view_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ViewDemoActivity.class)));
         getView(R.id.btn_scroll_bar_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ScrollBarActivity.class)));
         getView(R.id.btn_kotlin_test).setOnClickListener(v -> startActivity(new Intent(mActivity, KotlinMainActivity.class)));
+        getView(R.id.btn_rx_java_test).setOnClickListener(v -> startActivity(new Intent(mActivity, RxJavaDemoActivity.class)));
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);
 //        Button btnGlide = getView(R.id.btn_glide);

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pivot.myandroiddemo">
-    <!-- 允许sd卡写权限，需写入地图数据，禁用后无法显示地图 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取统计数据 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 使用步行AR导航，配置Camera权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取手机通讯录的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 监听系统开机广播权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:name=".application.MainApplication"
         android:allowBackup="true"
@@ -10,7 +27,13 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/StartTheme">
-        <activity android:name=".livedata.FortuneActivity"/>
+        <activity
+            android:name=".test.rx.RxJavaDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".test.demoview.test2.ViewTest2Activity"
+            android:exported="false" />
+        <activity android:name=".livedata.FortuneActivity" />
         <activity android:name=".retrofit.RetrofitDemoActivity" />
         <activity android:name=".kotlin.CoroutineDemoActivity" />
         <activity
@@ -50,7 +73,7 @@
         <activity android:name=".kotlin.KotlinMainActivity" /> <!-- 百度地图开发者秘钥 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="h1R8KmYLxMICrlXtgEnG94N5GpFmSHB4" />
+            android:value="P2Hcfix3vEwyyR8bMFr3b17snefzonYF" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -96,23 +119,6 @@
             android:enabled="true"
             android:exported="true"
             android:process=":aidl" />
-    </application> <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取统计数据 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 使用步行AR导航，配置Camera权限 -->
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 程序在手机屏幕关闭后后台进程仍然运行 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取手机通讯录的权限 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 监听系统开机广播权限 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.GET_TASKS" />
+    </application>
 
 </manifest>
