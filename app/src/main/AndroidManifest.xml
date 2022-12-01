@@ -28,6 +28,9 @@
         android:supportsRtl="true"
         android:theme="@style/StartTheme">
         <activity
+            android:name=".AnimationTest4Activity"
+            android:exported="false" />
+        <activity
             android:name=".test.rx.RxJavaDemoActivity"
             android:exported="false" />
         <activity
@@ -68,6 +71,7 @@
         <activity android:name=".test.demoview.ViewDemoActivity" />
         <activity android:name=".test.demoanimation.test2.AnimationTest2Activity" />
         <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
+        <activity android:name=".test.demoanimation.test4.AnimationTest4Activity" />
         <activity android:name=".test.demoview.test1.ViewTest1Activity" />
         <activity android:name=".scrollbar.ScrollBarActivity" />
         <activity android:name=".kotlin.KotlinMainActivity" /> <!-- 百度地图开发者秘钥 -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/svg_input">
+  <target
+      android:animation="@animator/trim_start"
+      android:name="line"/> <!--对应svg_input图片中name为line的path-->
+  <target
+      android:animation="@animator/trim_end"
+      android:name="pen"/> <!--对应svg_input图片中name为pen的path-->
+</animated-vector>

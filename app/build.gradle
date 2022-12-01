@@ -100,4 +100,5 @@ dependencies {
     implementation 'org.xclcharts:lib:2.4'
     implementation 'io.reactivex:rxjava:1.2.0'
     implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
 }
