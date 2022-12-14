@@ -6,7 +6,8 @@
     tools:context="com.pivot.myandroiddemo.test.demodraw.DrawDemoActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             style="@style/TextStyle_White_Normal"
@@ -17,6 +18,17 @@
             android:padding="@dimen/dimens_mid"
             android:gravity="center"
             android:text="绘图测试1"
+            android:background="@drawable/radius_10_no_stroke_blue_mid_bg_shape"/>
+
+        <Button
+            style="@style/TextStyle_White_Normal"
+            android:id="@+id/btn_draw_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_small"
+            android:padding="@dimen/dimens_mid"
+            android:gravity="center"
+            android:text="望远镜+刮刮卡"
             android:background="@drawable/radius_10_no_stroke_blue_mid_bg_shape"/>
         
     </LinearLayout>

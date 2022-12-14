@@ -28,9 +28,6 @@
         android:supportsRtl="true"
         android:theme="@style/StartTheme">
         <activity
-            android:name=".AnimationTest4Activity"
-            android:exported="false" />
-        <activity
             android:name=".test.rx.RxJavaDemoActivity"
             android:exported="false" />
         <activity
@@ -68,6 +65,7 @@
         <activity android:name=".test.demoanimation.test1.AnimationTest1Activity" />
         <activity android:name=".test.demodraw.DrawDemoActivity" />
         <activity android:name=".test.demodraw.test1.DrawTest1Activity" />
+        <activity android:name=".test.demodraw.telescope.DrawTest2Activity"/>
         <activity android:name=".test.demoview.ViewDemoActivity" />
         <activity android:name=".test.demoanimation.test2.AnimationTest2Activity" />
         <activity android:name=".test.demoanimation.test3.AnimationTest3Activity" />
