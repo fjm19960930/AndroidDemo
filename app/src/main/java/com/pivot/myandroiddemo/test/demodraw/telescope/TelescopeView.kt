@@ -1,6 +1,5 @@
 package com.pivot.myandroiddemo.test.demodraw.telescope
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
@@ -8,6 +7,9 @@ import android.view.MotionEvent
 import android.view.View
 import com.pivot.myandroiddemo.R
 
+/**
+ * 望远镜
+ */
 class TelescopeView(context: Context?, attrs: AttributeSet?): View(context, attrs) {
 
     constructor(context: Context?): this(context, null)

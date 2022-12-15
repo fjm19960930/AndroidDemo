@@ -69,7 +69,7 @@ class RubberView(context: Context?, attrs: AttributeSet?): View(context, attrs) 
         mRectSrc.set(0, 0, mBitmapDST?.width!!, mBitmapDST?.height!!)
         //绘制顶层结果图片
         canvas?.drawBitmap(mBitmapTEXT!!, mRectSrc, mRect, mPaint)
-        //save图层
+        //save图层 生成透明画布在restoreToCount之前的绘制都会在这个透明画布上操作
         val layerId = canvas?.saveLayer(0f, 0f, width.toFloat(), height.toFloat(), null, Canvas.ALL_SAVE_FLAG)
         //将手势轨迹绘制到目标图片上
         mCanvasDST.setBitmap(mBitmapDST)
