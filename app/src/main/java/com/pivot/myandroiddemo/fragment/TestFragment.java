@@ -32,14 +32,23 @@ import com.zcolin.frame.util.ToastUtil;
  */
 public class TestFragment extends BaseFragment {
 
+    private volatile static TestFragment instance = null;
+
     private LinearLayout rootLayout;
     private ShimmerTextView tv;
 
     public static TestFragment newInstance() {
-        Bundle args = new Bundle();
-        TestFragment fragment = new TestFragment();
-        fragment.setArguments(args);
-        return fragment;
+        if (instance == null) {
+            synchronized (TestFragment.class) {
+                if (instance == null) {
+                    Bundle args = new Bundle();
+                    instance = new TestFragment();
+                    instance.setArguments(args);
+                    return instance;
+                }
+            }
+        }
+        return instance;
     }
 
     @Override

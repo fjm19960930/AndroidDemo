@@ -78,11 +78,19 @@ public class MainFragment extends BaseFragment {
     private int currentStep;
     private ExecutorService executorService;//线程池对象
 
+    private volatile static MainFragment instance = null;
     public static MainFragment newInstance() {
-        Bundle args = new Bundle();
-        MainFragment fragment = new MainFragment();
-        fragment.setArguments(args);
-        return fragment;
+        if (instance == null) {
+            synchronized (MainFragment.class) {
+                if (instance == null) {
+                    Bundle args = new Bundle();
+                    instance = new MainFragment();
+                    instance.setArguments(args);
+                    return instance;
+                }
+            }
+        }
+        return instance;
     }
 
     @Override

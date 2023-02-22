@@ -36,11 +36,19 @@ public class NewsFragment extends BaseFragment {
     private List<BadgeView> badgeViewList;
     private int index = 0;
 
+    private volatile static NewsFragment instance = null;
     public static NewsFragment newInstance() {
-        Bundle args = new Bundle();
-        NewsFragment fragment = new NewsFragment();
-        fragment.setArguments(args);
-        return fragment;
+        if (instance == null) {
+            synchronized (NewsFragment.class) {
+                if (instance == null) {
+                    Bundle args = new Bundle();
+                    instance = new NewsFragment();
+                    instance.setArguments(args);
+                    return instance;
+                }
+            }
+        }
+        return instance;
     }
 
     @Override

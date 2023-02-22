@@ -42,11 +42,19 @@ public class MapFragment extends BaseFragment {
     private LatLng location;//当前定位位置
     private boolean showInfoWindowEnable = true;//是否显示InfoWindow
 
+    private volatile static MapFragment instance = null;
     public static MapFragment newInstance() {
-        Bundle args = new Bundle();
-        MapFragment fragment = new MapFragment();
-        fragment.setArguments(args);
-        return fragment;
+        if (instance == null) {
+            synchronized (MapFragment.class) {
+                if (instance == null) {
+                    Bundle args = new Bundle();
+                    instance = new MapFragment();
+                    instance.setArguments(args);
+                    return instance;
+                }
+            }
+        }
+        return instance;
     }
 
     @Override
