@@ -1,5 +1,6 @@
 package com.pivot.myandroiddemo.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
@@ -25,7 +26,13 @@ import com.pivot.myandroiddemo.test.redpoint.RedPointActivity;
 import com.pivot.myandroiddemo.test.rx.RxJavaDemoActivity;
 import com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView;
 import com.pivot.myandroiddemo.test.tablelayout.TabLayoutDemoActivity;
+import com.pivot.myandroiddemo.util.ConstUtil;
+import com.pivot.myandroiddemo.util.PluginUtils;
 import com.zcolin.frame.util.ToastUtil;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.Objects;
 
 /**
  * @author ASUS
@@ -111,6 +118,18 @@ public class TestFragment extends BaseFragment {
         getView(R.id.btn_scroll_bar_test).setOnClickListener(v -> startActivity(new Intent(mActivity, ScrollBarActivity.class)));
         getView(R.id.btn_kotlin_test).setOnClickListener(v -> startActivity(new Intent(mActivity, KotlinMainActivity.class)));
         getView(R.id.btn_rx_java_test).setOnClickListener(v -> startActivity(new Intent(mActivity, RxJavaDemoActivity.class)));
+        getView(R.id.btn_plugin).setOnClickListener(v -> {
+            try {
+                Class<?> pluginClazz = Class.forName("com.demo.plugintest.Test");
+                Constructor constructor = pluginClazz.getDeclaredConstructor();
+                constructor.setAccessible(true);
+                Object instance = constructor.newInstance();//因为kotlin的object是单例模式，所以不先实例化是会报错的
+                Method show = pluginClazz.getDeclaredMethod("showSomething", Context.class);
+                show.invoke(instance, getActivity());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);
 //        Button btnGlide = getView(R.id.btn_glide);
