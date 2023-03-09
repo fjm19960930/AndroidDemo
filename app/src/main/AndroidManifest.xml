@@ -73,6 +73,7 @@
         <activity android:name=".test.demoview.test1.ViewTest1Activity" />
         <activity android:name=".scrollbar.ScrollBarActivity" />
         <activity android:name=".kotlin.KotlinMainActivity" /> <!-- 百度地图开发者秘钥 -->
+        <activity android:name=".activity.ProxyActivity" />
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="P2Hcfix3vEwyyR8bMFr3b17snefzonYF" />

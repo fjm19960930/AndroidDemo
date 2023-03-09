@@ -3,6 +3,7 @@ package com.pivot.myandroiddemo.application;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
 import com.pivot.myandroiddemo.util.ConstUtil;
+import com.pivot.myandroiddemo.util.HookUtil;
 import com.pivot.myandroiddemo.util.PluginUtils;
 import com.zcolin.frame.app.BaseApp;
 
@@ -29,6 +30,10 @@ public class MainApplication extends BaseApp {
             e.printStackTrace();
         }
         PluginUtils.INSTANCE.loadClass(this);
+        HookUtil.hookAMS();
+        HookUtil.hookHandler();
+//        PluginUtils.INSTANCE.hookAMS();
+//        PluginUtils.INSTANCE.ss();
     }
 
 }

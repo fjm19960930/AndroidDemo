@@ -1,5 +1,6 @@
 package com.pivot.myandroiddemo.fragment;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import com.pivot.myandroiddemo.test.rx.RxJavaDemoActivity;
 import com.pivot.myandroiddemo.test.shimmertext.ShimmerTextView;
 import com.pivot.myandroiddemo.test.tablelayout.TabLayoutDemoActivity;
 import com.pivot.myandroiddemo.util.ConstUtil;
+import com.pivot.myandroiddemo.util.HookUtil;
 import com.pivot.myandroiddemo.util.PluginUtils;
 import com.zcolin.frame.util.ToastUtil;
 
@@ -129,6 +131,11 @@ public class TestFragment extends BaseFragment {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        });
+        getView(R.id.btn_plugin_act).setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setComponent(new ComponentName("com.demo.plugintest", "com.demo.plugintest.MainActivity"));
+            startActivity(intent);
         });
 //        Button btnCamera = getView(R.id.btnCamera);
 //        Button btnAddress = getView(R.id.btnAddress);

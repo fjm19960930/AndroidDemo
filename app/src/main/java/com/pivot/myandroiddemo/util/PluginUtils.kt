@@ -7,6 +7,7 @@ import java.lang.reflect.Field
 
 object PluginUtils {
 
+    //合并dexElements
     fun loadClass(context: Context) {
         val pathClassLoaderClazz: Class<*> = Class.forName("dalvik.system.BaseDexClassLoader")
         val pathListField: Field = pathClassLoaderClazz.getDeclaredField("pathList")//pathList的Field对象
